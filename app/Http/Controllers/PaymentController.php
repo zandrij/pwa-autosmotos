@@ -17,7 +17,7 @@ class PaymentController extends Controller
 
         try {
             $response = Http::withOptions([
-                'verify' => true,
+                'verify' => false,
                 'cert' => $certPath,
                 'key' => $keyPath,
             ])->post('https://apple-pay-gateway-cert.apple.com/paymentservices/startSession', [
