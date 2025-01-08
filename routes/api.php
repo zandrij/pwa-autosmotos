@@ -11,4 +11,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::get('/verifySession', [PaymentController::class, 'verify']);
+Route::post('/verifySession', [PaymentController::class, 'verify']);
