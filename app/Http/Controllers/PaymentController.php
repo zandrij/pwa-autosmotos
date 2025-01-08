@@ -19,7 +19,7 @@ class PaymentController extends Controller
             $response = Http::withOptions([
                 'verify' => false,
                 'cert' => $certPath,
-                'key' => $keyPath,
+                'ssl_key' => $keyPath,
             ])->post('https://apple-pay-gateway-cert.apple.com/paymentservices/startSession', [
                 'merchantIdentifier' => 'merchant.es.autosmotos.app',
                 'displayName' => 'AutosMotos',
